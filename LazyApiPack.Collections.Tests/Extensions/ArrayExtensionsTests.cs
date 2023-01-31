@@ -1,6 +1,8 @@
-namespace LazyApiPack.Collections.Tests
+using LazyApiPack.Collections.Extensions;
+
+namespace LazyApiPack.Collections.Tests.Extensions
 {
-    public class Tests
+    public class ArrayExtensionsTests
     {
         [SetUp]
         public void Setup()

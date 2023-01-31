@@ -1,9 +1,12 @@
 ﻿using System.Diagnostics;
 using System.Globalization;
 
-namespace LazyApiPack.Collections
+namespace LazyApiPack.Collections.Extensions
 {
-    public static class CollectionExtensions
+    /// <summary>
+    /// Provides extensions for Arrays
+    /// </summary>
+    public static class ArrayExtensions
     {
         /// <summary>
         /// Adds a list of items to a given array.
@@ -40,7 +43,7 @@ namespace LazyApiPack.Collections
             }
 
             var target = new TSource[source.Length + elements.Length];
-            
+
             for (int i = 0; i < index; i++)
             {
                 target[i] = source[i];
@@ -76,7 +79,7 @@ namespace LazyApiPack.Collections
             {
                 target[j] = source[i];
             }
-           
+
             return target;
         }
 
