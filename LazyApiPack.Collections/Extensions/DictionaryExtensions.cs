@@ -17,16 +17,21 @@ namespace LazyApiPack.Collections.Extensions
         /// <param name="key">The key to insert or update.</param>
         /// <param name="value">The value for the key.</param>
         /// <returns>True, if the key was newly created, if updated, returns false.</returns>
-        public static bool Upsert<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key, TValue value) where TKey : notnull
+        public static bool Upsert<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key, TValue? value) where TKey : notnull
         {
             if (dictionary.ContainsKey(key))
             {
-                dictionary[key] = value;
+
+#pragma warning disable CS8601 // Possible null reference assignment.
+                dictionary[key] = value ?? default(TValue);
+#pragma warning restore CS8601 // Possible null reference assignment.
                 return false;
             }
             else
             {
-                dictionary.Add(key, value);
+#pragma warning disable CS8604 // Possible null reference argument.
+                dictionary.Add(key, value ?? default(TValue));
+#pragma warning restore CS8604 // Possible null reference argument.
                 return true;
             }
         }
