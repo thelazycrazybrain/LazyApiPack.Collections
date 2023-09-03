@@ -44,3 +44,7 @@ Removes a range of elements and resizes the array.
 ## Dictionary Extensions
 ### Upsert
 Adds a key to a dictionary if it does not exist or updates its value.
+
+## Collection Extensions
+### Upsert
+Provides a function to easily add unique items to a collection.

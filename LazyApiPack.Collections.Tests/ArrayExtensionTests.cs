@@ -1,3 +1,5 @@
+using LazyApiPack.Collections.Extensions;
+
 namespace LazyApiPack.Collections.Tests
 {
     public class Tests

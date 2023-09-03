@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.Globalization;
-
-namespace LazyApiPack.Collections.Extensions
+﻿namespace LazyApiPack.Collections.Extensions
 {
     /// <summary>
     /// Provides extensions for Arrays
